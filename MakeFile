@@ -1,0 +1,24 @@
+# Title : Binary Search Trees
+# Author : Melike Demirci
+# ID: 21702346
+# Section : 2
+# Assignment : 2
+# Description : makefile
+
+
+
+hw2: main.o DecisionTree.o DecisionTreeNode.o
+	g++ main.o DecisionTree.o DecisionTreeNode.o -o hw2
+	rm *.o
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+DecisionTree.o: DecisionTree.cpp DecisionTree.h
+	g++ -c DecisionTree.cpp
+
+DecisionTreeNode.o: DecisionTreeNode.cpp DecisionTreeNode.h
+	g++ -c DecisionTreeNode.cpp
+
+clean:
+	rm hw2
